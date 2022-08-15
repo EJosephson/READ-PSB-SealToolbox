@@ -9,8 +9,8 @@ ui <- dashboardPage(
       menuItem("Haulout Tables", tabName = "haulouttables"),
       menuItem("Map of Haulout Sites", tabName = "hauloutmap"),
       menuItem("Tag Lookup", tabName = "taglookup")
-      ,
-      menuItem("Tag Lookup2", tabName = "taglookup2")
+     # ,
+     # menuItem("Tag Lookup2", tabName = "taglookup2")
      )
   ),
   ## Body content
@@ -30,11 +30,11 @@ ui <- dashboardPage(
       tabItem(tabName = "hauloutmap",
               source('./scripts/hauloutmap_ui.R', local = TRUE)$value
       ) 
-      ,
+    #  ,
       # # # another tab content
-      tabItem(tabName = "taglookup2",
-             source('./scripts/taglookup2_ui.R', local = TRUE)$value
-      ) 
+      #tabItem(tabName = "taglookup2",
+     #        source('./scripts/taglookup2_ui.R', local = TRUE)$value
+     # ) 
       )  
     )
   )
@@ -49,7 +49,7 @@ server = function(input, output, session) {
   ## taglookup Output
   source('./scripts/taglookup_server.R', local = TRUE)$value
   ## taglookup2 Output
-  source('./scripts/taglookup2_server.R', local = TRUE)$value
+ # source('./scripts/taglookup2_server.R', local = TRUE)$value
 }
 
 shinyApp(ui, server)
