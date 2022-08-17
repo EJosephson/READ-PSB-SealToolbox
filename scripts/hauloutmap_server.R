@@ -31,12 +31,14 @@
 
   }, ignoreNULL = FALSE)
   
+
+  
   output$mymap <- renderLeaflet({
     leaflet() %>%
       addProviderTiles(providers$Esri.WorldImagery,
                        options = providerTileOptions(noWrap = TRUE)
       ) %>%
-      addCircleMarkers(data = points(), label = ~as.character(Name), stroke = FALSE, fillOpacity = 2, radius = 4 )
+      addCircleMarkers(data = points(), label = ~paste("Site:", Name, "Latitude", Latitude, sep=" "), stroke = FALSE, fillOpacity = 2, radius = 4 )
   })
 
 
