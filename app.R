@@ -2,7 +2,7 @@ Sys.setenv(ORACLE_HOME="/ora1/app/oracle/product/11.2.0/dbhome_1")
 source('./scripts/global.R', local = TRUE)$value
 
 ui <- dashboardPage(
-  dashboardHeader(title = "Seal Toolbox"),
+  dashboardHeader(title = "Pinniped Distribution Query Tool"),
   ## Sidebar content
   dashboardSidebar(
     sidebarMenu(
