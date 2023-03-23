@@ -3,7 +3,7 @@
 #
 library (shiny)
 library(DT)
-library(data.table)
+#library(data.table)
 library(plyr)
 library(dplyr)
 library(sp)
