@@ -1,7 +1,7 @@
 source('global.R', local = TRUE)$value
 
 ui <- dashboardPage(
-  dashboardHeader(title = "NEFSC Seal Toolbox"),
+  dashboardHeader(title = "Pinniped Distribution Query Tool", titleWidth = 450),
   ## Sidebar content
   dashboardSidebar(
     width = 280,
