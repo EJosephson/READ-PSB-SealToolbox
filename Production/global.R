@@ -2,11 +2,11 @@
 
 #
 library (shiny)
-library(DT)
+#library(DT)
 #library(data.table)
-library(plyr)
+#library(plyr)
 library(dplyr)
-library(sp)
+#library(sp)
 library(shinydashboard)
 library(leaflet)
 library(htmltools)
