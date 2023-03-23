@@ -1,6 +1,5 @@
 
 #load some libraries
-library(rgdal)
 library(leaflet)
 library(leafpop)
 library(dplyr)
