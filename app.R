@@ -1,4 +1,3 @@
-Sys.setenv(ORACLE_HOME="/ora1/app/oracle/product/11.2.0/dbhome_1")
 source('./scripts/global.R', local = TRUE)$value
 
 ui <- dashboardPage(
@@ -8,7 +7,8 @@ ui <- dashboardPage(
     sidebarMenu(
       menuItem("Haulout Tables", tabName = "haulouttables"),
       menuItem("Map of Haulout Sites", tabName = "hauloutmap")
-      #menuItem("Tag Lookup", tabName = "taglookup")
+      ,
+      menuItem("Select example", tabName = "rectsel")
      # ,
      # menuItem("Tag Lookup2", tabName = "taglookup2")
      )
@@ -22,10 +22,10 @@ ui <- dashboardPage(
       )
       ,
       # # # Second tab content
-      #tabItem(tabName = "taglookup",
-      #        source('./scripts/taglookup_ui.R', local = TRUE)$value
-     # )  
-      #,
+      tabItem(tabName = "rectsel",
+              source('./scripts/rectangleSelectExample.R', local = TRUE)$value
+      )  
+      ,
       # # # third tab content
       tabItem(tabName = "hauloutmap",
               source('./scripts/hauloutmap_ui.R', local = TRUE)$value
