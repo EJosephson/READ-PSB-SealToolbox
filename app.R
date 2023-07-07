@@ -1,7 +1,7 @@
 source('./scripts/global.R', local = TRUE)$value
 
 ui <- dashboardPage(
-  dashboardHeader(title = "Pinniped Distribution Query Tool"),
+  dashboardHeader(title = "Pinniped Distribution Query Tool", titleWidth = 450),
   ## Sidebar content
   dashboardSidebar(
     sidebarMenu(
@@ -9,8 +9,8 @@ ui <- dashboardPage(
       menuItem("Map of Haulout Sites", tabName = "hauloutmap")
       ,
       menuItem("Select example", tabName = "rectsel")
-     # ,
-     # menuItem("Tag Lookup2", tabName = "taglookup2")
+      ,
+      menuItem("Maine Bay Units", tabName = "bays")
      )
   ),
   ## Body content
@@ -30,11 +30,11 @@ ui <- dashboardPage(
       tabItem(tabName = "hauloutmap",
               source('./scripts/hauloutmap_ui.R', local = TRUE)$value
       ) 
-    #  ,
+      ,
       # # # another tab content
-      #tabItem(tabName = "taglookup2",
-     #        source('./scripts/taglookup2_ui.R', local = TRUE)$value
-     # ) 
+      tabItem(tabName = "bays",
+             source('./scripts/baysMap.R', local = TRUE)$value
+      ) 
       )  
     )
   )
