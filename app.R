@@ -11,6 +11,8 @@ ui <- dashboardPage(
       menuItem("Select example", tabName = "rectsel")
       ,
       menuItem("Maine Bay Units", tabName = "bays")
+      ,
+      menuItem("Expando Tables", tabName = "expando")
      )
   ),
   ## Body content
@@ -35,6 +37,11 @@ ui <- dashboardPage(
       tabItem(tabName = "bays",
              source('./scripts/baysMap.R', local = TRUE)$value
       ) 
+      ,
+      # # # another tab content
+      tabItem(tabName = "expando",
+              source('./scripts/PupExpand_ui.R', local = TRUE)$value
+      )
       )  
     )
   )
@@ -46,8 +53,8 @@ server = function(input, output, session) {
   source('./scripts/haulouttables_server.R', local = TRUE)$value
   ## hauloutmap Output
   source('./scripts/hauloutmap_server.R', local = TRUE)$value
-  ## taglookup Output
-  #source('./scripts/taglookup_server.R', local = TRUE)$value
+  ## Expando Output Output
+  source('./scripts/PupExpand_server.R', local = TRUE)$value
   ## taglookup2 Output
  # source('./scripts/taglookup2_server.R', local = TRUE)$value
 }
