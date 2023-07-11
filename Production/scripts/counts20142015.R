@@ -33,3 +33,4 @@ basemap %>%
     colorPalette = colors,
     width = 60 * sqrt(counts1415$TOTALSEALS) / sqrt(max(counts1415$TOTALSEALS)), transitionTime = 0
   )
+

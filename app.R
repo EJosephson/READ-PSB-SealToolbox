@@ -37,12 +37,12 @@ ui <- dashboardPage(
       ,
       # # # another tab content
       tabItem(tabName = "bays",
-             source('./scripts/baysMap.R', local = TRUE)$value
+             source('./scripts/baysMap.R', local = TRUE)$value, h1("text to be displayed")
       ) 
       ,
       # # # another tab content
       tabItem(tabName = "baylines",
-              source('./scripts/baysWithLineGraph.R', local = TRUE)$value
+              source('./scripts/baysWithLineGraph.R', local = TRUE)$value, h3("Demonstration of charts in popups, unfortunately they don't match up yet with the right polygons!")
       ) 
       ,
       # # # another tab content
