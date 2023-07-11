@@ -7,6 +7,7 @@ library(crosstalk)
 ## read in data
 data_2 <- read.csv("./data/GraySealHaulouts.csv")
 
+
 pupsites <- data_2 %>% filter(HAULOUTSITE %in% c("Muskeget Island", "Monomoy Island", "Seal Island", "Wooden Ball", "Green Island", "Nomans Island"))
 
 sdf <- SharedData$new(pupsites, ~pupsites$HAULOUTSITECODE)

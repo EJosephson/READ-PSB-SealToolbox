@@ -2,6 +2,7 @@
 library(rgdal)
 library(leaflet)
 library(leafpop)
+library(sf)
 
 
 bays<-st_read("./data/BayPolys.shp")

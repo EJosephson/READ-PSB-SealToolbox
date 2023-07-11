@@ -12,6 +12,8 @@ ui <- dashboardPage(
       ,
       menuItem("Maine Bay Units", tabName = "bays")
       ,
+      menuItem("Maine Bay Units with Line Graphs", tabName = "baylines")
+      ,
       menuItem("Expando Tables", tabName = "expando")
      )
   ),
@@ -36,6 +38,11 @@ ui <- dashboardPage(
       # # # another tab content
       tabItem(tabName = "bays",
              source('./scripts/baysMap.R', local = TRUE)$value
+      ) 
+      ,
+      # # # another tab content
+      tabItem(tabName = "baylines",
+              source('./scripts/baysWithLineGraph.R', local = TRUE)$value
       ) 
       ,
       # # # another tab content

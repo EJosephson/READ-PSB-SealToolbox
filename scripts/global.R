@@ -1,7 +1,7 @@
 ##global file 
 
 #
-library(RODBC)
+
 library (shiny)
 library(DT)
 library(data.table)
@@ -15,3 +15,5 @@ library(leaflet)
 #library(reticulate)
 library(DBI)
 library(htmltools)
+library(ROracle)
+library(sf)
