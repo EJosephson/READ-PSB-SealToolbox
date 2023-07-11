@@ -3,7 +3,7 @@ ui <- fluidPage(# Application title
   mainPanel(
     tabsetPanel(
       tabPanel("Gray Seals", dataTableOutput("my_table"))
-      #,
-     # tabPanel("Harbor Seals", dataTableOutput("my_table2"))
+      ,
+      tabPanel("Harbor Seals", dataTableOutput("my_table2"))
     )
   ))
