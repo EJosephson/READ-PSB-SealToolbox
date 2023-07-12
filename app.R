@@ -27,7 +27,7 @@ ui <- dashboardPage(
       ,
       # # # Second tab content
       tabItem(tabName = "rectsel",
-              source('./scripts/rectangleSelectExample.R', local = TRUE)$value
+              source('./scripts/rectangleSelectExample2.R', local = TRUE)$value
       )  
       ,
       # # # third tab content
@@ -42,7 +42,7 @@ ui <- dashboardPage(
       ,
       # # # another tab content
       tabItem(tabName = "baylines",
-              source('./scripts/baysWithLineGraph.R', local = TRUE)$value, h3("Demonstration of charts in popups, unfortunately they don't match up yet with the right polygons!")
+              source('./scripts/baysWithLineGraph.R', local = TRUE)$value, h3("Demonstration of charts in popups, unfortunately they don't match up yet with the right polygons! and now graphs got wierd too")
       ) 
       ,
       # # # another tab content

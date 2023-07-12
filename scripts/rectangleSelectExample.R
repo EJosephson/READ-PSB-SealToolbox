@@ -9,6 +9,9 @@ data_2 <- read.csv("./data/GraySealHaulouts.csv")
 
 
 pupsites <- data_2 %>% filter(HAULOUTSITE %in% c("Muskeget Island", "Monomoy Island", "Seal Island", "Wooden Ball", "Green Island", "Nomans Island"))
+tilesURL <- "http://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}"
+
+
 
 sdf <- SharedData$new(pupsites, ~pupsites$HAULOUTSITECODE)
 DT1<-datatable(
@@ -17,7 +20,7 @@ DT1<-datatable(
   )))
 ltlf5<- leaflet(sdf) %>% 
   #addProviderTiles(providers$CartoDB.Positron) %>%
-  addTiles() %>%
+  addTiles(tilesURL) %>%
   addCircleMarkers(
     lng = ~LON,
     lat = ~LAT,

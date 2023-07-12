@@ -13,14 +13,14 @@ baynames<-read.csv("./data/MaineBayUnits.csv")
 
 bays2 <- merge(bays, baynames, by.x="BAYNUM", by.y="BAYNUM")
 #rename BAYCODE to Bayunit
-bays2 <- bays2 %>% rename(Bayunit = BAYCODE)
+bays2 <- bays2 %>% dplyr::rename(Bayunit = BAYCODE)
 
 baycts<-read_csv("./data/Seal Abundance by Bay Unit 1993-2018 (1).csv")
 
 my_list <- list()  
 loop<-for (i in unique(baycts$Bayunit)) {
   BAYNUM<-baycts%>% filter(Bayunit==i)
-  plot<-ggplot(Bayunit, aes(x = Year, y = Estimate.Pups)) + 
+  plot<-ggplot(baycts, aes(x = Year, y = Estimate.Pups)) + 
     geom_line()+labs(title = i)
   my_list[[i]] <- plot
 }
