@@ -12,9 +12,11 @@ ui <- dashboardPage(
       ,
       menuItem("Maine Bay Units", tabName = "bays")
       ,
-      menuItem("Maine Bay Units with Line Graphs", tabName = "baylines")
+      menuItem("Maine Bay Units with Graphs", tabName = "baylines")
       ,
       menuItem("Expando Tables", tabName = "expando")
+     # ,
+    #  menuItem("Rectangle select tab version", tabName = "rectselect")
      )
   ),
   ## Body content
@@ -42,13 +44,18 @@ ui <- dashboardPage(
       ,
       # # # another tab content
       tabItem(tabName = "baylines",
-              source('./scripts/baysWithLineGraph.R', local = TRUE)$value, h3("Demonstration of charts in popups, unfortunately they don't match up yet with the right polygons! and now graphs got wierd too")
+              source('./scripts/baysWithLineGraph.R', local = TRUE)$value, h3("Demonstration of charts in popups, unfortunately they don't match up yet with the right polygons!")
       ) 
       ,
       # # # another tab content
       tabItem(tabName = "expando",
               source('./scripts/PupExpand_ui.R', local = TRUE)$value
       )
+  #    ,
+      # # # another tab content
+   #   tabItem(tabName = "rectselect",
+   #           source('./scripts/RectSelect_ui.R', local = TRUE)$value
+   #   ) 
       )  
     )
   )
@@ -62,6 +69,7 @@ server = function(input, output, session) {
   source('./scripts/hauloutmap_server.R', local = TRUE)$value
   ## Expando Output Output
   source('./scripts/PupExpand_server.R', local = TRUE)$value
+#  source('./scripts/RectSelect_server.R', local = TRUE)$value
   ## taglookup2 Output
  # source('./scripts/taglookup2_server.R', local = TRUE)$value
 }

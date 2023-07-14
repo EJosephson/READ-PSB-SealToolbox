@@ -18,10 +18,11 @@ bays2 <- bays2 %>% dplyr::rename(Bayunit = BAYCODE)
 baycts<-read_csv("./data/Seal Abundance by Bay Unit 1993-2018 (1).csv")
 
 my_list <- list()  
+#i="CASB"
 loop<-for (i in unique(baycts$Bayunit)) {
   BAYNUM<-baycts%>% filter(Bayunit==i)
-  plot<-ggplot(baycts, aes(x = Year, y = Estimate.Pups)) + 
-    geom_line()+labs(title = i)
+  plot<-ggplot(na.omit(BAYNUM), aes(x = Year, y = Estimate.Pups)) + 
+    geom_bar(stat = "identity")+labs(title = i)
   my_list[[i]] <- plot
 }
 ###or this is the fix on stack overflow, but still doesn't get it right
