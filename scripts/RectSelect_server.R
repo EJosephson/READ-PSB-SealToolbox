@@ -39,7 +39,7 @@ datatable(
     "  var rowsCollapse = $(this).nextUntil('.dtrg-group');",
     "  $(rowsCollapse).toggleClass('hidden');",
     "});",
-    "table.one('init', () => $('#my_table .dtrg-group').trigger('click'))"
+    "table.one('init', () => $('#my_table3 .dtrg-group').trigger('click'))"
   ),
   selection = 'none'
 )  

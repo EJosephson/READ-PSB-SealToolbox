@@ -4,6 +4,7 @@ library(readr)
 library(leaflet)
 library(rgdal)
 library(leafpop)
+library(sf)
 
 #### note the graphs do not correspond to polys!! See https://stackoverflow.com/questions/64455149/leaflet-popup-graphs-dont-correspond-to-map
 bays<-st_read("./data/BayPolys.shp")
@@ -14,6 +15,7 @@ baynames<-read.csv("./data/MaineBayUnits.csv")
 bays2 <- merge(bays, baynames, by.x="BAYNUM", by.y="BAYNUM")
 #rename BAYCODE to Bayunit
 bays2 <- bays2 %>% dplyr::rename(Bayunit = BAYCODE)
+bays2<- bays2[order(bays2$Bayunit),]
 
 baycts<-read_csv("./data/Seal Abundance by Bay Unit 1993-2018 (1).csv")
 
@@ -44,7 +46,7 @@ m1 <- leaflet() %>%
               fillOpacity = 0.6,       
               color = "darkgrey",      
               weight = 1.5, 
-              popup = popupGraph(my_list)
+            popup = popupGraph(my_list)
   )
 m1
 
