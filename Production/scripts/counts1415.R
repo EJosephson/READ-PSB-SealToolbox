@@ -1,4 +1,3 @@
-
 #load some libraries
 library(leaflet)
 library(leafpop)
@@ -12,7 +11,7 @@ library(lubridate)
 
 
 
-counts1415<-read.csv("data/countsummary20142015.csv")
+counts1415<-read.csv("./data/countsummary20142015.csv")
 
 
 counts1415$SURVEYDATE <- mdy(counts1415$SURVEYDATE) - days(1)
@@ -20,9 +19,9 @@ counts1415$SURVEYDATE <- mdy(counts1415$SURVEYDATE) - days(1)
 
 tilesURL <- "http://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}"
 
-basemap <- leaflet(width = "100%", height = "400px") %>%
-  addTiles(tilesURL) 
-
+basemap <- leaflet(width = "100%", height = "600px") %>%
+ # addTiles(tilesURL) 
+addProviderTiles(providers$Esri.WorldImagery)
 colors <- c("#3093e5", "#fcba50")
 basemap %>%
   addMinicharts(
@@ -31,6 +30,7 @@ basemap %>%
     type = "pie",
     time = counts1415$SURVEYDATE,
     colorPalette = colors,
-    width = 60 * sqrt(counts1415$TOTALSEALS) / sqrt(max(counts1415$TOTALSEALS)), transitionTime = 0
+    width = 170 * sqrt(counts1415$TOTALSEALS) / sqrt(max(counts1415$TOTALSEALS)), transitionTime = 0,
+    popup = popupArgs(
+      labels = c("Gray Seals", "Harbor Seals"))
   )
-
