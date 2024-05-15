@@ -4,7 +4,7 @@
 tagTable <- eventReactive(input$k, {
   if (input$tagtype == "research"){
   nova <- odbcConnect("nova", uid="xxxx", pwd="xxxx",believeNRows=FALSE)
-#  novaNew <- DBI::dbConnect(odbc::odbc(), dsn = 'nefscdb1.nmfs.local', uid="xxxx", pwd="xxxx", SERVICE_NAME = "NEFSC_USERS")
+#  novaNew <- DBI::dbConnect(odbc::odbc(), dsn = 'nefscdb1.nmfs.local', uid="xxxx", pwd="mxxxx", SERVICE_NAME = "NEFSC_USERS")
 #  sole_con <- DBI::dbConnect(odbc::odbc(), dsn = 'sole', uid="xxxx", pwd="xxxx")
   
   
@@ -49,8 +49,3 @@ output$tagtable <- renderTable({
 #or...
 #novaDBI <- DBI::dbConnect(odbc::odbc(), dsn = 'NEFSCDB1.nmfs.local:1526/NEFSC_USERS', uid="xxxx", pwd="xxxx")
 
-#not working
-#novanew <- odbcConnect(dsn="nefscdb1.nmfs.local", dbname="NEFSC_USERS", uid="xxxx", pwd="xxxx",believeNRows=FALSE)
-#novanew <- odbcConnect(dsn="NEFSC_USERS", uid="xxxx", pwd="xxxx",believeNRows=FALSE)
-#novanewDBI <- DBI::dbConnect(odbc::odbc(), dsn = "nefscdb1.nmfs.local", uid="xxxx", pwd="xxxx", dbname="NEFSC_USERS")
-#novanewDBI <- DBI::dbConnect(odbc::odbc(), dsn = "nefscdb1.nmfs.local", uid="xxxx", pwd="xxxx")
