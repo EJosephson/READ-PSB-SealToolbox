@@ -6,8 +6,8 @@ ui <- dashboardPage(
   dashboardSidebar(
     sidebarMenu(
       menuItem("General Information", tabName = "readme")
-      # ,
-      # menuItem("Map of Haulout Sites", tabName = "hauloutmap")
+       ,
+       menuItem("Map of Haulout Sites", tabName = "hauloutmap")
       # ,
       # menuItem("Gray Seal Pupping Data", tabName = "rectsel")
       # ,
@@ -23,7 +23,7 @@ ui <- dashboardPage(
       tabItem(tabName = "readme",
               source('./scripts/readme3_ui.R', local = TRUE)$value
       )
-#       ,
+       ,
 #       # # # Second tab content
 #       tabItem(tabName = "rectsel",
 #               source('./scripts/rectangleSelectExample3.R', local = TRUE)$value
@@ -35,9 +35,9 @@ ui <- dashboardPage(
 #       )  
 #       ,
 #       # # # third tab content
-#       tabItem(tabName = "hauloutmap",
-#               source('./scripts/hauloutmap2_ui.R', local = TRUE)$value, h4("Green markers depict sites surveyed by the NEFSC or University of Maine where adults of the species were seen, red markers are where pups were seen.")
-#       ) 
+       tabItem(tabName = "hauloutmap",
+               source('./scripts/hauloutmap2_ui.R', local = TRUE)$value, h4("Green markers depict sites surveyed by the NEFSC or University of Maine where adults of the species were seen, red markers are where pups were seen.")
+       ) 
 #       ,
 #       # # # another tab content
 #       tabItem(tabName = "counts1415",
@@ -54,7 +54,7 @@ server = function(input, output, session) {
   ## readmeOutput
   source('./scripts/readme3_server.R', local = TRUE)$value
   ## hauloutmap Output
-#  source('./scripts/hauloutmap2_server.R', local = TRUE)$value
+  source('./scripts/hauloutmap2_server.R', local = TRUE)$value
 }
 
 shinyApp(ui, server)
