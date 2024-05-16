@@ -2758,7 +2758,7 @@
   },
   "files": {
     "app.R": {
-      "checksum": "6cfec3676d225e8d742dca0e3e611711"
+      "checksum": "968e80ffb1c26b09a0bb75d511ea6e5d"
     },
     "data/Adjusted_Seal Abundance by Bay Unit 1993-2018_with_Lat-Lon.csv": {
       "checksum": "67df658d788469e49f9d826c15bd20f7"
@@ -2821,10 +2821,10 @@
       "checksum": "4026506485abe15e141b9133b0eda6e8"
     },
     "scripts/readme3_ui.R": {
-      "checksum": "2194ba8cca18b24d43755046a097c8bc"
+      "checksum": "e9df78b29512b0c7b329bb121f89a90d"
     },
     "scripts/rectangleSelectExample3.R": {
-      "checksum": "d91a724eae4f2c6b45dff406f436645f"
+      "checksum": "d3a36c20ecd1ef323efeca303b7f6d10"
     },
     "scripts/rectangleSelectPv2.R": {
       "checksum": "1278c1fcca2905e01cd336c0ff57079b"
