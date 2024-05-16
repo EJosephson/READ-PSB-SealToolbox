@@ -52,10 +52,10 @@ ltlf5<- leaflet(shared_sites) %>%
 
 
 
-mainPanel(width = 15,
-#body <-  dashboardBody( tags$head(tags$style(HTML('
-#.box {margin-top: 2px;margin-left: 0px; margin-right: 0px; margin-bottom:2px;padding:0px}'
-#))),
+#mainPanel(width = 10,
+body <-  dashboardBody( tags$head(tags$style(HTML('
+.box {margin-top: 2px;margin-left: 0px; margin-right: 0px; margin-bottom:2px;padding:0px}'
+))),
   fluidRow(
     # App title ----
     titlePanel(tagList(img(src = 'noaanefsclogo.PNG'),br(),title='Gray Seal Pupping Data'),
