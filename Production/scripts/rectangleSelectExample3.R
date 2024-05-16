@@ -7,22 +7,6 @@ library(shinydashboard)
 
 dashboardSidebar(disable = TRUE)
 
-## read in data
-#data_2 <- read.csv("./data/GraySealHaulouts.csv")
-
-#data3 <- read.csv("./data/HgPupsYearandSite.csv")
-#data3$Site[data3$Site=="Monomoy"]<-"Monomoy Island"
-#data3$Site[data3$Site=="Muskeget"]<-"Muskeget Island"
-#data3$Site[data3$Site=="Nomans"]<-"Nomans Island"
-#data3$Pups[data3$Pups=="not surveyed"]<-""
-
-#pupsites<- merge(data3, data_2, by.x="Site", by.y="HAULOUTSITE")
-#pupsites <- data_2 %>% filter(HAULOUTSITE %in% c("Muskeget Island", "Monomoy Island", "Seal Island", "Wooden Ball", "Green Island", "Nomans Island"))
-
-tilesURL <- "http://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}"
-
-
-#sdf <- SharedData$new(pupsites, ~pupsites$HAULOUTSITECODE)
 
 ####
 
@@ -33,8 +17,6 @@ data3 <- read.csv("./data/HgPupsYearandSite.csv")
 data3$Site[data3$Site=="Monomoy"]<-"Monomoy Island"
 data3$Site[data3$Site=="Muskeget"]<-"Muskeget Island"
 data3$Site[data3$Site=="Nomans"]<-"Nomans Island"
-#data3$Pups[data3$Pups=="not surveyed"]<-""
-#data3 <- data3 %>% dplyr::rename("HAULOUTSITE" = "Site")
 data3$Site <- as.factor(data3$Site)
 pupsites <- data_2 %>% filter(Site %in% c("Muskeget Island", "Monomoy Island", "Seal Island", "Wooden Ball", "Green Island", "Nomans Island"))
 
@@ -52,18 +34,6 @@ DT1<-datatable(
   ),
   extensions =  c('Select', 'Buttons'),   options = list(select = list(style = 'os', items = 'row'),dom = 'Bfrtip',columnDefs = list(list(className = 'dt-center', targets = 1:3)), autoWidth = TRUE, include.rownames= FALSE, buttons =  list(list(extend = 'collection',  buttons = c('csv', 'excel', 'pdf', 'print'), text = 'Download')
   )),
-# )
-
-#  extensions = 'RowGroup',
- # options = list(rowGroup = list(dataSrc = 1), pageLength = 20),
-  # callback = JS(
-  #   "table.on('click', 'tr.dtrg-group', function () {",
-  #   "  var rowsCollapse = $(this).nextUntil('.dtrg-group');",
-  #   "  $(rowsCollapse).toggleClass('hidden');",
-  #   "});",
-  #   "table.one('init', () => $('#my_table .dtrg-group').trigger('click'))"
-  # ),
-  # selection = 'none'
 )  
   
 ltlf5<- leaflet(shared_sites) %>% 
@@ -81,30 +51,6 @@ ltlf5<- leaflet(shared_sites) %>%
   )   
 
 
-#bscols(widths = c(12, 12),
-#       ltlf5,
-#       DT1      
-#)
-
-
-
-#body <- dashboardBody(
-#  fluidRow(
-#    box(title = "Gray Seal Rookeries - use the bracket tool and drag the corners to select rookeries (blue dots) of interest", width=10, ltlf5)
-#  ),
-#  fluidRow(
-#    box(title = "Or just use any of the filters to select data. See Wood et. al 'Rates of increase in gray seal pupping...https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7035213/' for more information", width=10, DT1)
-#  )
-#)
-
-## side by side boxes
-#body <- dashboardBody(
-#  fluidRow(
-#    box(title = "Gray Seal Rookeries - use the bracket tool and drag the corners to select rookeries (blue dots) of interest", ltlf5)
- #   ,
- #   box(title = "Or just use any of the filters to select data. See Wood et. al 'Rates of increase in gray seal pupping...https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7035213/' for more information", DT1)
- # )
-#)
 
 mainPanel(width = 10,
 #body <-  dashboardBody( tags$head(tags$style(HTML('

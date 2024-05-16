@@ -9,8 +9,8 @@ ui <- dashboardPage(
        ,
        menuItem("Map of Haulout Sites", tabName = "hauloutmap")
        ,
-       #menuItem("Gray Seal Pupping Data", tabName = "rectsel")
-       #,
+       menuItem("Gray Seal Pupping Data", tabName = "rectsel")
+       ,
        menuItem("Harbor Seal Pupping Data", tabName = "Pvrectsel")
        ,
        menuItem("2014/2015 Cape Cod Counts", tabName = "counts1415")
@@ -25,10 +25,10 @@ ui <- dashboardPage(
       )
        ,
 #       # # # Second tab content
-#       tabItem(tabName = "rectsel",
-#               source('./scripts/rectangleSelectExample3.R', local = TRUE)$value
-#       )  
-#       ,
+       tabItem(tabName = "rectsel",
+               source('./scripts/rectangleSelectExample3.R', local = TRUE)$value
+       )  
+       ,
 #       # # # Second tab content
        tabItem(tabName = "Pvrectsel",
                source('./scripts/rectangleSelectPv2.R', local = TRUE)$value
