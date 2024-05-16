@@ -14,6 +14,7 @@ baycenters<-read.csv("./data/baycenters.csv")
 baycts<-merge(baycts, baycenters, by = "BAYNUM", all.x=TRUE)
 
 baycts<- select(baycts, LONG, LAT, BAYCODE, Bayunit=BAYDESC, Year, Nonpups=Estimate.Nonpups, Pups=Estimate.Pups)
+baycts$Bayunit<-as.factor(baycts$Bayunit)
 bays<-st_read("./data/BayPolys.shp")
 
 # Wrap data frame in SharedData
@@ -51,8 +52,8 @@ ltlf5<- leaflet(sd) %>%
 
 
 
-#body <- dashboardBody(
-mainPanel(width=10,
+body <- dashboardBody(
+#mainPanel(width=10,
   fluidRow(
     # App title ----
     titlePanel(tagList(img(src = 'noaanefsclogo.PNG'),br(),title='Harbor Seal Pupping Data - by Bay Unit'),

@@ -14,6 +14,7 @@ baycenters<-read.csv("./data/baycenters.csv")
 baycts<-merge(baycts, baycenters, by = "BAYNUM", all.x=TRUE)
 
 baycts<- select(baycts, LONG, LAT, BAYCODE, Bayunit=BAYDESC, Year, Nonpups=Estimate.Nonpups, Pups=Estimate.Pups)
+baycts$Bayunit<-as.factor(baycts$Bayunit)
 bays<-st_read("./data/BayPolys.shp")
 
 # Wrap data frame in SharedData
