@@ -10,19 +10,19 @@ dashboardSidebar(disable = TRUE)
 
 ####
 
-## read in data
-data_2 <- read.csv("./data/GraySealHaulouts.csv")
-data_2 <- data_2 %>% dplyr::rename("Site" = "HAULOUTSITE")
-data3 <- read.csv("./data/HgPupsYearandSite.csv")
-data3$Site[data3$Site=="Monomoy"]<-"Monomoy Island"
-data3$Site[data3$Site=="Muskeget"]<-"Muskeget Island"
-data3$Site[data3$Site=="Nomans"]<-"Nomans Island"
-data3$Site <- as.factor(data3$Site)
-pupsites <- data_2 %>% filter(Site %in% c("Muskeget Island", "Monomoy Island", "Seal Island", "Wooden Ball", "Green Island", "Nomans Island"))
-
-# set up a group of SharedData objects
-shared_sites <- SharedData$new(pupsites, key = ~Site, group = "shared_obj")
-shared_cts <- SharedData$new(data3, key = ~Site, group = "shared_obj")
+# ## read in data
+# data_2 <- read.csv("./data/GraySealHaulouts.csv")
+# data_2 <- data_2 %>% dplyr::rename("Site" = "HAULOUTSITE")
+# data3 <- read.csv("./data/HgPupsYearandSite.csv")
+# data3$Site[data3$Site=="Monomoy"]<-"Monomoy Island"
+# data3$Site[data3$Site=="Muskeget"]<-"Muskeget Island"
+# data3$Site[data3$Site=="Nomans"]<-"Nomans Island"
+# data3$Site <- as.factor(data3$Site)
+# pupsites <- data_2 %>% filter(Site %in% c("Muskeget Island", "Monomoy Island", "Seal Island", "Wooden Ball", "Green Island", "Nomans Island"))
+# 
+# # set up a group of SharedData objects
+# shared_sites <- SharedData$new(pupsites, key = ~Site, group = "shared_obj")
+# shared_cts <- SharedData$new(data3, key = ~Site, group = "shared_obj")
 ####
 
 
