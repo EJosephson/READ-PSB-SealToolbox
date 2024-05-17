@@ -13,7 +13,6 @@ dashboardSidebar(disable = TRUE)
 # ## read in data
  data2 <- read.csv("./data/GraySealHaulouts.csv")
  data2<- select(data2, Site=HAULOUTSITE, LAT, LON)
- #data2 <- data2 %>% dplyr::rename("Site" = "HAULOUTSITE")
  data3 <- read.csv("./data/HgPupsYearandSite.csv")
  data3$Site[data3$Site=="Monomoy"]<-"Monomoy Island"
  data3$Site[data3$Site=="Muskeget"]<-"Muskeget Island"
