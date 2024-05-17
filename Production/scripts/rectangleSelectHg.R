@@ -46,17 +46,17 @@ dashboardSidebar(disable = TRUE)
 # 
 # 
 # #mainPanel(width = 10,
-# body <-  dashboardBody( tags$head(tags$style(HTML('
-# .box {margin-top: 2px;margin-left: 0px; margin-right: 0px; margin-bottom:2px;padding:0px}'
-# ))),
-#   fluidRow(
+ body <-  dashboardBody( tags$head(tags$style(HTML('
+ .box {margin-top: 2px;margin-left: 0px; margin-right: 0px; margin-bottom:2px;padding:0px}'
+ ))),
+   fluidRow(
 #     # App title ----
-#     titlePanel(tagList(img(src = 'noaanefsclogo.PNG'),br(),title='Gray Seal Pupping Data'),
-#                tags$head(tags$link(rel = "icon", type = "image/png", href = "favicon.png")
-#                )
-#     ),
-#   )
-#  ,
+     titlePanel(tagList(img(src = 'noaanefsclogo.PNG'),br(),title='Gray Seal Pupping Data'),
+                tags$head(tags$link(rel = "icon", type = "image/png", href = "favicon.png")
+                )
+     ),
+   )
+  ,
 #    fluidRow(
 # 
 #      column(6,ltlf2, h4(style="text-align: justify;","The NEFSC has been conducting aerial surveys of gray seal pupping colonies since 2005 to monitor the number of pups born in U.S. waters. 
@@ -73,5 +73,5 @@ dashboardSidebar(disable = TRUE)
 #    column(6,DT2),  p(style="text-align: justify;","* indicates site not surveyed; ** indicates the counts were removed due to poor image quality/coverage, *** indicates the counts were removed due to survey date.")
 #   )
 # 
-# )
+ )
 # 
