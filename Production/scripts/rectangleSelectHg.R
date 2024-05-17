@@ -11,7 +11,8 @@ dashboardSidebar(disable = TRUE)
 ####
 
 # ## read in data
-   data2 <- read.csv("./data/GraySealHaulouts.csv")
+   data2 <- read.csv("./data/HgPupsYearAndSite3.csv")
+#   data2 <- read.csv("./data/GraySealHaulouts.csv")
   # data2<- select(data2, Site=HAULOUTSITE, LAT, LON)
   #sites <- read.csv("./data/HgPupsYearandSite3.csv")
   # data3$Site[data3$Site=="Monomoy"]<-"Monomoy Island"
