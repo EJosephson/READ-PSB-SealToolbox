@@ -9,12 +9,10 @@ ui <- dashboardPage(
        ,
        menuItem("Map of Haulout Sites", tabName = "hauloutmap")
        ,
-      # menuItem("Gray Seal Pupping Data", tabName = "rectsel")
-     #  ,
-      menuItem("Gray Seal Pupping Data", tabName = "Pvrectsel")
-      ,
-       menuItem("Harbor Seal Pupping Data", tabName = "Pvrectsel")
+       menuItem("Gray Seal Pupping Data", tabName = "rectsel")
        ,
+#       menuItem("Harbor Seal Pupping Data", tabName = "Pvrectsel")
+#       ,
        menuItem("2014/2015 Cape Cod Counts", tabName = "counts1415")
     )
   ),
@@ -27,15 +25,15 @@ ui <- dashboardPage(
       )
        ,
 #       # # # Second tab content
-#       tabItem(tabName = "rectsel",
-#               source('./scripts/rectangleSelectHg.R', local = TRUE)$value
-#       )  
-#       ,
-#       # # # Second tab content
-       tabItem(tabName = "Pvrectsel",
-               source('./scripts/rectangleSelectPv2.R', local = TRUE)$value
+       tabItem(tabName = "rectsel",
+               source('./scripts/rectangleSelectHg.R', local = TRUE)$value
        )  
        ,
+#       # # # Second tab content
+#      tabItem(tabName = "Pvrectsel",
+#               source('./scripts/rectangleSelectPv2.R', local = TRUE)$value
+#       )  
+#       ,
 #       # # # third tab content
        tabItem(tabName = "hauloutmap",
                source('./scripts/hauloutmap2_ui.R', local = TRUE)$value, h4("Green markers depict sites surveyed by the NEFSC or University of Maine where adults of the species were seen, red markers are where pups were seen.")
