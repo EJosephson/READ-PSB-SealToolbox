@@ -26,13 +26,13 @@ dashboardSidebar(disable = TRUE)
   share <- SharedData$new(data2)
 
 # 
-#  DT2<-datatable(
-#    share,filter = list(
-#      position = 'top', clear = FALSE
-#    ),
-#    extensions =  c('Select', 'Buttons'),   options = list(select = list(style = 'os', items = 'row'),dom = 'Bfrtip',columnDefs = list(list(className = 'dt-center', targets = 1:3)), autoWidth = TRUE, include.rownames= FALSE, buttons =  list(list(extend = 'collection',  buttons = c('csv', 'excel', 'pdf', 'print'), text = 'Download')
-#    )),
-#  )  
+  DT2<-datatable(
+    share,filter = list(
+      position = 'top', clear = FALSE
+    ),
+    extensions =  c('Select', 'Buttons'),   options = list(select = list(style = 'os', items = 'row'),dom = 'Bfrtip',columnDefs = list(list(className = 'dt-center', targets = 1:3)), autoWidth = TRUE, include.rownames= FALSE, buttons =  list(list(extend = 'collection',  buttons = c('csv', 'excel', 'pdf', 'print'), text = 'Download')
+    )),
+  )  
 #   
 #  ltlf2<- leaflet(share) %>% 
 #    addProviderTiles(providers$Esri.WorldImagery) %>%
@@ -71,7 +71,7 @@ dashboardSidebar(disable = TRUE)
 #    ,
 # #    
 # #     
-#    column(6,DT2),  p(style="text-align: justify;","* indicates site not surveyed; ** indicates the counts were removed due to poor image quality/coverage, *** indicates the counts were removed due to survey date.")
+    column(6,DT2),  p(style="text-align: justify;","* indicates site not surveyed; ** indicates the counts were removed due to poor image quality/coverage, *** indicates the counts were removed due to survey date.")
 #   )
 # 
  )
