@@ -11,18 +11,18 @@ dashboardSidebar(disable = TRUE)
 ####
 
 # ## read in data
-  # data2 <- read.csv("./data/GraySealHaulouts.csv")
+   #data2 <- read.csv("./data/GraySealHaulouts.csv")
   # data2<- select(data2, Site=HAULOUTSITE, LAT, LON)
-  # data3 <- read.csv("./data/HgPupsYearandSite.csv")
+   sites <- read.csv("./data/HgPupsYearandSite2.csv")
   # data3$Site[data3$Site=="Monomoy"]<-"Monomoy Island"
   # data3$Site[data3$Site=="Muskeget"]<-"Muskeget Island"
   # data3$Site[data3$Site=="Nomans"]<-"Nomans Island"
   # data2$Site[data2$Site=="Great Point Nantucket"]<-"Great Point"
-  # data3$Site <- as.factor(data3$Site)
+   sites$Site <- as.factor(sites$Site)
   # sites<-merge(data3, data2, by ="Site", all.x=TRUE)
  # 
  # # Wrap data frame in SharedData
- # share <- SharedData$new(sites)
+  share <- SharedData$new(sites)
 
 # 
 #  DT2<-datatable(
