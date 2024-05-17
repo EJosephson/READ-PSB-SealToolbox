@@ -2758,7 +2758,7 @@
   },
   "files": {
     "app.R": {
-      "checksum": "968e80ffb1c26b09a0bb75d511ea6e5d"
+      "checksum": "da393a27e957ee1c4beba469f9bc6ea0"
     },
     "data/Adjusted_Seal Abundance by Bay Unit 1993-2018_with_Lat-Lon.csv": {
       "checksum": "67df658d788469e49f9d826c15bd20f7"
@@ -2796,6 +2796,9 @@
     "data/HgPupsYearAndSite.csv": {
       "checksum": "4a1ea4e268aca31165653fea2d9ba3a8"
     },
+    "data/HgPupsYearAndSite2.csv": {
+      "checksum": "38e2a754f85840bdac4f854250713847"
+    },
     "data/baycenters.csv": {
       "checksum": "4c16ba2e15aaddd7b6360ae94b7de218"
     },
@@ -2823,11 +2826,11 @@
     "scripts/readme3_ui.R": {
       "checksum": "e9df78b29512b0c7b329bb121f89a90d"
     },
-    "scripts/rectangleSelectExample3.R": {
-      "checksum": "d3a36c20ecd1ef323efeca303b7f6d10"
+    "scripts/rectangleSelectHg.R": {
+      "checksum": "84b4773ae98684bd65bcbf96e8599776"
     },
     "scripts/rectangleSelectPv2.R": {
-      "checksum": "1278c1fcca2905e01cd336c0ff57079b"
+      "checksum": "93f379b4aa1f33fec6917c0ab908769a"
     },
     "www/Gray-seal-2.png": {
       "checksum": "073212cd1a11c1f38d5b186a40561f17"
