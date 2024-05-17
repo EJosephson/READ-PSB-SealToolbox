@@ -18,7 +18,7 @@ dashboardSidebar(disable = TRUE)
   # data3$Site[data3$Site=="Muskeget"]<-"Muskeget Island"
   # data3$Site[data3$Site=="Nomans"]<-"Nomans Island"
   # data2$Site[data2$Site=="Great Point Nantucket"]<-"Great Point"
-   sites$Site <- as.factor(sites$Site)
+  # sites$Site <- as.factor(sites$Site)
   # sites<-merge(data3, data2, by ="Site", all.x=TRUE)
  # 
  # # Wrap data frame in SharedData
