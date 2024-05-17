@@ -22,7 +22,7 @@ dashboardSidebar(disable = TRUE)
   # sites<-merge(data3, data2, by ="Site", all.x=TRUE)
  # 
  # # Wrap data frame in SharedData
-  share <- SharedData$new(sites)
+#  share <- SharedData$new(sites)
 
 # 
 #  DT2<-datatable(
