@@ -46,7 +46,8 @@ ltlf5<- leaflet(sd) %>%
     lng = ~LONG,
     lat = ~LAT,
     radius = 3,
-    color = 'yellow'
+    color = 'yellow',
+    popup = ~Bayunit,
     
   )   
 
