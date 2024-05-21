@@ -31,6 +31,7 @@ basemap %>%
     time = counts1415$SURVEYDATE,
     colorPalette = colors,
     width = 170 * sqrt(counts1415$TOTALSEALS) / sqrt(max(counts1415$TOTALSEALS)), transitionTime = 0,
-    popup = popupArgs(
+    layerId = counts1415$HAULOUTSITE,
+    popup = popupArgs( showTitle = TRUE,
       labels = c("Gray Seals", "Harbor Seals"))
   )
