@@ -68,7 +68,7 @@ body <- dashboardBody(
                        tags$a(href="https://onlinelibrary.wiley.com/doi/full/10.1111/mms.12873",  target="_blank", rel="noopener noreferrer","Sigourney et al. 2020")),  h4("Use the bracket tool in the corner of this map and drag the corners to select bay units of interest. Make sure to include the polygon center (yellow dot) in your selection.
                        Or just use the filters in the datatable at left to select data.")),
     
-    column(6,DT1)
+    column(6,DT1),  p(style="text-align: justify;","*These estimates have been recomputed from Sigourney et al. 2020 to report the mean annual abundance of non-pups and pups in each bay unit, so total abundance (i.e. summing across bay units) may not match exactly with those reported in Sigourney et al. 2020.")
  
 
 )
