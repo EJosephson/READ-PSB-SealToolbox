@@ -36,7 +36,7 @@ ui <- dashboardPage(
        ,
 #       # # # third tab content
        tabItem(tabName = "hauloutmap",
-               source('./scripts/hauloutmap2_ui.R', local = TRUE)$value, h4("Green markers depict sites surveyed by the NEFSC or University of Maine where adults of the species were seen, red markers are where pups were seen.")
+               source('./scripts/hauloutmap2_ui.R', local = TRUE)$value, h4("Orange markers depict sites surveyed by the NEFSC or University of Maine where adults of the species were seen, purple markers are where pups were seen.")
        ) 
        ,
 #       # # # another tab content

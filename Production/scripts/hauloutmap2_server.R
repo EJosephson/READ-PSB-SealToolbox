@@ -36,7 +36,7 @@ output$mymap <- renderLeaflet({
     addProviderTiles(providers$Esri.WorldImagery,
                      options = providerTileOptions(noWrap = TRUE)
     ) %>%
-    addCircleMarkers(data = points(), label = ~paste(Name), stroke = FALSE, fillOpacity = 2, radius = 4, color = ~ ifelse(Pup == "Y", "red", "green"))
+    addCircleMarkers(data = points(), label = ~paste(Name), stroke = FALSE, fillOpacity = 2, radius = 4, color = ~ ifelse(Pup == "Y", "purple", "orange"))
 })
 
 
