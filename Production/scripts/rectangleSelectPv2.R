@@ -3,6 +3,8 @@ library(leaflet)
 library(DT)
 library(crosstalk)
 library(shinydashboard)
+library(tidyverse)
+library (sf)
 
 
 dashboardSidebar(disable = TRUE)
@@ -15,7 +17,9 @@ baycts<-merge(baycts, baycenters, by = "BAYNUM", all.x=TRUE)
 
 baycts<- select(baycts, LONG, LAT, BAYCODE, Bayunit=BAYDESC, Year, Nonpups=Estimate.Nonpups, Pups=Estimate.Pups)
 baycts$Bayunit<-as.factor(baycts$Bayunit)
-bays<-st_read("./data/BayPolys.shp")
+#bays<-st_read("./data/BayPolys.shp")
+bays<-sf::read_sf("./data/BayPolys/BayPolys.shp")
+
 
 # Wrap data frame in SharedData
 sd <- SharedData$new(baycts)
